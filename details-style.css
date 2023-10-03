@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+@import url("https://cdnjs.cloudfare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --main-color: #2a70c5;
+  --red: red;
+  --light-color: #777;
+  --light-bg: #eee;
+  --black: #273543;
+  --white: #fff;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  --border: 0.1rem solid rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+
+:root {
+  --primary-color: #f1f6ff;
+}
+
+header {
+  background-color: #f1f6ff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  font-size: 32px;
+  font-weight: bold;
+  font-style: oblique;
+  color: black;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+ul li a {
+  color: #000;
+  transform: all 0.2s ease-in-out;
+}
+
+ul li a.active {
+  color: #797577;
+}
+
+ul li a:hover {
+  height: 80px;
+  width: 25%;
+  margin: -95px 0;
+  background: linear-gradient(to right, #0c88ee 0%, #2c78fe 100%);
+  border-radius: 10%;
+  padding: 5px;
+  transition: all 0.3s ease-in;
+}
+
+.join {
+  padding: 4px;
+  position: relative;
+
+  z-index: 100;
+}
+
+.join a {
+  font-size: 15px;
+  padding: 6px 15px;
+  color: #000000;
+}
+
+.join::before {
+  content: "";
+  position: absolute;
+  background-color: #e5f5ff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: skew(-20deg);
+  z-index: -1;
+}
+
+.join a.sign-up {
+  position: relative;
+  color: #fff;
+}
+
+.join a.sign-up::before {
+  content: "";
+  position: absolute;
+  background-color: #1e69eb;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: skew(-20deg);
+  z-index: -1;
+}
+
+.signin-signup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sign-in:hover {
+  background-color: #281b25;
+  color: #e5f5ff;
+}
+.sign-up:hover {
+  background-color: #281b25;
+  color: #e5f5ff;
+}
+#menu-icon {
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+  z-index: 100;
+}
+
+@media (max-width: 1000px) {
+  #menu-icon {
+    display: block;
+  }
+
+  .nav-list {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    background-color: #f1f6ff;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+  }
+
+  .logo {
+    z-index: 1000;
+  }
+  .navbar {
+    justify-content: space-between;
+  }
+
+  .nav-list.open {
+    left: 0;
+  }
+}
+body {
+  color: #000;
+}
+
+section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.job-details.details {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  border: var(--border);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+
+.job-details.details h3 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: capitalize;
+  text-overflow: ellipsis;
+}
+
+.job-details.details.job-info a {
+  display: block;
+  font-size: 1.6rem;
+  color: var(--main-color);
+  margin: 0.5rem 0;
+}
+
+.job-details.details.job-info a:hover {
+  text-decoration: underline;
+}
+
+.job-details.details.job-info p {
+  padding: poiu 1rem 0;
+  font-size: 1.6rem;
+  color: var(--light-color);
+}
+
+.job-details.details .basic-details {
+  background-color: var(--light-bg);
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  padding-bottom: 0;
+}
+
+.job-details.details .basic-details p {
+  color: var(--light-color);
+  padding: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.job-details.details ul {
+  margin: 1rem 0;
+}
+
+.job-details.details ul li {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  color: var(--light-color);
+  margin-left: 3rem;
+}
+
+.job-details.details .description {
+  margin-top: 1.5rem;
+}
+
+.job-details.details .description p {
+  font-size: 1.6rem;
+  color: var(--light-color);
+  line-height: 1.8;
+  padding: 0.5rem 0;
+}
+
+.job-details.details .save {
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.job-details.details .save:hover {
+  background-color: var(--black);
+}
+
+.job-details.details .save i {
+  margin-right: 0.5rem;
+  color: var(--black);
+}
+
+.job-details.details .save span {
+  color: var(--light-color);
+}
+
+.job-details.details .save:hover i {
+  color: var(--white);
+}
+
+.job-details.details .save:hover span {
+  color: var(--white);
+}

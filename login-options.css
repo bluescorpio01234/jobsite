@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f6ff; /* Primary background color */
+}
+
+.container {
+  /* Your previous styles */
+  /* ... */
+  display: flex;
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+  perspective: 1000px; /* Adding perspective for 3D effect */
+}
+
+.card {
+  /* Your previous styles */
+  /* ... */
+  flex: 1;
+  height: 70vh;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  backface-visibility: hidden; /* Hide the backface of the card during flip */
+  transform-style: preserve-3d; /* Preserve 3D transformations during flip */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Moved from .card to here */
+  cursor: pointer; /* Moved from .card to here */
+}
+
+.card .btn {
+  /* ... */
+  opacity: 0; /* Hide the button initially */
+  pointer-events: none; /* Disable button clicks initially */
+}
+
+.card.animate__backOutDown {
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+}
+
+.card.animate__backOutDown.animate__animated {
+  animation-name: animate__backOutDown;
+}
+
+.card.animate__backInUp {
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+}
+
+.card.animate__backInUp.animate__animated {
+  animation-name: animate__backInUp;
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
+}
+
+.card.flipped .btn {
+  /* Show the button on the flipped card */
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Additional styles for card flip effect */
+.card.jobseeker {
+  /* ... */
+  background: linear-gradient(
+    45deg,
+    #e5f5ff,
+    #f1f6ff
+  ); /* JobSeeker card gradient background */
+}
+
+.card.company {
+  /* ... */
+  background: linear-gradient(
+    45deg,
+    #2c78fe,
+    #0c88ee
+  ); /* Company card gradient background */
+}
+
+.card:hover {
+  /* ... */
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card.btn:hover {
+  /* ... */
+  background-color: #0c88ee; /* Button background color on hover */
+}

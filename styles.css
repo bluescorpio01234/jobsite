@@ -1,0 +1,50 @@
+/* Additional custom styles */
+.job-post-company {
+  background-color: #f1f6ff;
+}
+
+.job-details-box {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.job-tittle ul {
+  list-style: none;
+  padding: 0;
+}
+
+.job-tittle ul li {
+  margin-bottom: 8px;
+}
+
+.post-details1 ul,
+.post-details2 ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+.post-details1 ul li,
+.post-details2 ul li {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.post-details1 ul li::before,
+.post-details2 ul li::before {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 18px;
+  color: #2c78fe;
+}
+
+.apply-btn2 .btn {
+  background-color: #2c78fe;
+  color: white;
+}
